@@ -1,0 +1,12 @@
+[
+	{
+		"name": "npr",
+		"uri": "http://www.npr.org/rss/rss.php?id=1001",
+		"type": "rss"
+	},
+	{
+		"name": "npr",
+		"uri": "http://www.npr.org/rss/rss.php?id=1008",
+		"type": "rss"
+    }
+]
