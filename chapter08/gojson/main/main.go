@@ -76,4 +76,24 @@ func jsonDecode() {
 func main() {
 	//strToJson()
 	//jsonDecode();
+	strToJsonMap()
+}
+func strToJsonMap() {
+	//json to map
+	//键 string 值 任意类型
+	var c map[string]interface{}
+	err := json.Unmarshal([]byte(str), &c)
+	if err != nil {
+		fmt.Println("err", err)
+		return
+	}
+	fmt.Println(c)
+	fmt.Println(c["name"])
+	fmt.Println(c["title"])
+	fmt.Println(c["contact"])
+	//内部的json格式无法转换,必须强制类型转换
+	home := c["contact"].(map[string]interface{})["home"]
+	cell := c["contact"].(map[string]interface{})["cell"]
+	fmt.Println(home)
+	fmt.Println(cell)
 }
